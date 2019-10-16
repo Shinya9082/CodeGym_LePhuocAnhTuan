@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+</head>
+<body>
+<form name="Calculator">
+    <input type="text" name="soA" id="soA" >
+    <input type="text" name="soB" id="soB" >
+    <br>
+    <input type="button" name="add" value="Cộng(+)" id="add" onclick="doAdd()">
+    <input type="button" name="minus" value="Trừ(-)" id="minus" onclick="doMinus()">
+    <input type="button" name="mul" value="Nhân(x)" id="mul" onclick="doMul()">
+    <input type="button" name="sub" value="Chia(/)" id="sub" onclick="doSub()">
+</form>
+<b id="hien_thi"></b>
+<script>
+    function doAdd() {
+        let ket_qua=parseInt(document.getElementById("soA").value)+ parseInt(document.getElementById("soB").value);
+        document.getElementById("hien_thi").innerHTML ="Kết quả là: " +ket_qua;
+    }
+    function doMinus() {
+        let ket_qua=parseInt(document.getElementById("soA").value)- parseInt(document.getElementById("soB").value);
+        document.getElementById("hien_thi").innerHTML ="Kết quả là: " +ket_qua;
+    }
+    function doMul() {
+        let ket_qua=parseInt(document.getElementById("soA").value)* parseInt(document.getElementById("soB").value);
+        document.getElementById("hien_thi").innerHTML ="Kết quả là: " +ket_qua;
+    }
+    function doSub() {
+        let ket_qua=parseInt(document.getElementById("soA").value)/ parseInt(document.getElementById("soB").value);
+        document.getElementById("hien_thi").innerHTML ="Kết quả là: " +ket_qua;
+    }
+</script>
+
+</body>
+</html>
