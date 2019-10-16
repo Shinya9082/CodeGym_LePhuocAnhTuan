@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form name="convertCurrency">
+    <label>Amount:</label>
+    <input type="text" name="textAmount" id="tien" >
+
+    <label>From Curreny</label>
+    <select id="tien_goc">
+        <option value="VND">VietNam</option>
+        <option value="USD" selected>USD</option>
+    </select>
+
+    <label>To Currency</label>
+    <select id="tien_doi">
+        <option value="VND" selected>VietNam</option>
+        <option value="USD"> USD</option>
+    </select>
+    <input type="button" name="convert" value="Convert" onclick="doi_tien()">
+    <p id="hien_thi"></p>
+</form>
+<script>
+    function doi_tien() {
+        let nhap_tien= document.getElementById("tien").value;
+        nhap_tien=parseInt(nhap_tien);
+        let tien_doi= document.getElementById("tien_doi").value;
+        let tien_goc= document.getElementById("tien_goc").value;
+        let ket_qua;
+        console.log(tien_doi);
+        tien_goc===tien_doi?
+            ket_qua= nhap_tien:
+            tien_goc==='USD'?
+                ket_qua=nhap_tien*23000:
+                ket_qua=nhap_tien/23000;
+        document.getElementById("hien_thi").innerHTML ="Kết quả là: " +ket_qua;
+    }
+</script>
+</body>
+</html>
