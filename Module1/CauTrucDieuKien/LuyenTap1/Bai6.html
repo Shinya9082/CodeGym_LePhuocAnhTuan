@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Doanh số bán hàng theo $"));
+    let bouns= a>=10000? a*10/100:
+        a>=5000? a*5/100:
+            a>2500? a*3/100:
+                a>1000? a*2/100:
+                    a*(1/100);
+    alert("Số tiền hoa hồng bạn sẽ nhận được là "+bouns)
+</script>
+</body>
+</html>
