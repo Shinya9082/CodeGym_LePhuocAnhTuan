@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngày trong tháng</title>
+</head>
+<body>
+<form>
+    <input type="text" name="Thang" id="thang" >
+    <input type="button" name="tinhSoNgay" value="Tính số ngày" onclick="tinhNgay()">
+    <br>
+    <b id="hien_thi"></b>
+</form>
+<script>
+    function tinhNgay(){
+        let thang= parseInt(document.getElementById("thang").value);
+        let message;
+        switch (thang) {
+            case 2: message= "Tháng 2 có 28 ngày hoặc 29 ngày(năm nhuận)";break;
+            case 4:
+            case 6:
+            case 9:
+            case 11: message= "Tháng "+thang+" có 30 ngày"; break;
+            default:
+                thang>12? message=thang +" không tồn tại": message= "Tháng "+thang+" có 31 ngày";
+        }
+        console.log(message);
+        document.getElementById("hien_thi").innerHTML= message+"";
+    }
+
+</script>
+</body>
+</html>
