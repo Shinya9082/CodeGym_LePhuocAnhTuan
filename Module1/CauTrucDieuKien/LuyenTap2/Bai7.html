@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai7</title>
+</head>
+<body>
+    <script>
+        let a= parseInt(prompt("Nhập a"));
+        let b= parseInt(prompt("Nhập b"));
+        let c= parseInt(prompt("Nhập c"));
+        if (a===0){
+            b===0&&c===0? alert("Phương trình có vô số nghiệm"):
+                c===0? alert("Phương trình vô nghiệm"):
+                    alert("Phương trình có nghiệm là "+ (-c/b))
+        }else {
+            let delta= -(b*b-4*a*c);
+            delta<0? alert("Phương trình vô nghiệm"):
+                delta===0? alert("Phương trình có nghiệm là "+(-b/(2*a))):
+                    alert("Phương trình có nghiệm là\n" +((-b+Math.sqrt(delta))/(2*a))+"\nvà\n"+((-b-Math.sqrt(delta))/(2*a)));
+        }
+    </script>
+</body>
+</html>

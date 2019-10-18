@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai10</title>
+</head>
+<body>
+<script>
+    let earned= parseInt(prompt("Thu nhập theo $ của bạn là"));
+    let vat;
+    earned<=500? vat=0:
+        earned<=1000? vat=1:
+            earned<=5000? vat=5:
+                earned<=10000? vat=10:
+                    vat=15;
+    alert("Thuế thu nhập cá nhân là: "+earned*vat/100);
+</script>
+</body>
+</html>

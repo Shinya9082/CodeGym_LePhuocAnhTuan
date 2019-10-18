@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai10</title>
+</head>
+<body>
+<script>
+    let powerUsed= parseInt(prompt("Nhập chữ điện bạn đã dùng"));
+    let price;
+    powerUsed<=5? price=20000:
+        powerUsed<=10? price=25000:
+            powerUsed<=50? price=30000:
+                powerUsed<=100? price=35000:
+                    price=40000;
+    alert("Tiền điện phải trả là: "+(powerUsed*price)+"VND");
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai12</title>
+</head>
+<body>
+<script>
+    let moneyBorrowed= parseInt(prompt("Số tiền đã vay"));
+    let month= parseInt(prompt("Số tháng muốn vay"));
+    let interest=0;
+
+
+    if (month>12){
+        moneyBorrowed>10000? interest=5:
+            moneyBorrowed>5000? interest=7:
+                moneyBorrowed>2000? interest=10:
+                    interest=12;
+    } else {
+        if(month>6){
+            moneyBorrowed>10000? interest=8:
+                moneyBorrowed>5000? interest=10:
+                    moneyBorrowed>2000? interest=12:
+                        interest=15;
+        } else {
+            moneyBorrowed>10000? interest=10:
+                moneyBorrowed>5000? interest=12:
+                    moneyBorrowed>2000? interest=15:
+                        interest=20;
+        }
+    }
+    alert("Tiền lãi phải trả sau"+month+" tháng là "+moneyBorrowed*interest);
+</script>
+</body>
+</html>
