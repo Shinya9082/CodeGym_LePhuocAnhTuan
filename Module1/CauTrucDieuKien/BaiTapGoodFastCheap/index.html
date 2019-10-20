@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<form>
+    <label>Good:</label>
+    <input type="checkbox" id="good" value="good" onclick="checkGood()">
+    <br>
+    <label>Fast:</label>
+    <input type="checkbox" id="fast" value="fast" onclick="checkFast()">
+    <br>
+    <label>Cheap:</label>
+    <input type="checkbox" id="cheap" value="cheap" onclick="checkCheap()">
+
+<script>
+    function checkGood() {
+        let good = document.getElementById("good").checked;
+        console.log(good);
+        let fast = document.getElementById("fast").checked;
+        console.log(fast);
+        let cheap = document.getElementById("cheap").checked;
+        console.log(cheap);
+        if(good){
+            if(fast&&cheap){
+                document.getElementById("good").checked=true;
+                document.getElementById("fast").checked=false;
+                document.getElementById("cheap").checked=true;
+            }
+
+        }
+    }
+    function checkFast() {
+        let good = document.getElementById("good").checked;
+        console.log(good);
+        let fast = document.getElementById("fast").checked;
+        console.log(fast);
+        let cheap = document.getElementById("cheap").checked;
+        console.log(cheap);
+        if(fast) {
+            if (good && cheap) {
+                document.getElementById("good").checked = true;
+                document.getElementById("fast").checked = true;
+                document.getElementById("cheap").checked = false;
+            }
+        }
+    }
+    function checkCheap() {
+        let good = document.getElementById("good").checked;
+        console.log(good);
+        let fast = document.getElementById("fast").checked;
+        console.log(fast);
+        let cheap = document.getElementById("cheap").checked;
+        console.log(cheap);
+        if(cheap) {
+            if (fast && good) {
+                document.getElementById("good").checked = false;
+                document.getElementById("fast").checked = true;
+                document.getElementById("cheap").checked = true;
+            }
+        }
+    }
+
+</script>
+</form>
+</body>
+</html>
