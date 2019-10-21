@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+    let num=0,text="",total=0;
+    while (num!==-1){
+        num = parseInt(prompt("Input n"));
+        text=text+num+"\n";
+        total=total+num
+    }
+    document.getElementById("demo").innerText= "Input number:\n"+text+"The total sum is = "+total;
+
+</script>
+</body>
+</html>
