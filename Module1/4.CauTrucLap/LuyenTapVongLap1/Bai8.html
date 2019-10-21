@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai8</title>
+</head>
+<body>
+<form>
+    <input type="button" id="play" name="Play" value="Play" onclick="playGame()">
+    <input type="button" id="rePlay" name="Replay" value="Replay" onclick="playGame()">
+</form>
+<script>
+    function playGame() {
+        let x= Math.floor((Math.random()*parseInt(prompt("Độ khó từ 0 ->"))+1));
+        let count=1;
+        while (count<=3){
+            let a = (parseInt(prompt("Bạn đoán là số mấy")));
+            if(a===x){
+                alert("Bạn đã đoán trúng");
+                count=4;
+            }
+            else {
+                alert("Bạn đã doán sai\nCòn "+(3-count)+" lượt đoán");
+                console.log(count);
+                count++;
+            }
+
+        }
+        alert("Game Over");
+
+    }
+</script>
+</body>
+</html>

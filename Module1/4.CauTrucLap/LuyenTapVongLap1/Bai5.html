@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+    let total=0;
+    let f=1,f1=1,f2=1;
+    for(let i=0;i<20;i++){
+        if (i<=1)
+            total+=1;
+        else {
+            f2=f1;
+            f1=f;
+            f=f1+f2;
+            total+=f;
+        }
+    }
+    alert("Tổng của 20 số Fibonacci đầu tiên là "+total);
+
+</script>
+</body>
+</html>
