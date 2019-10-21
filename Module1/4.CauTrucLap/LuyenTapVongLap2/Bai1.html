@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<script>
+    let temp="";
+    let f=1,f1=1,f2=1;
+    let x=parseInt(prompt("Bạn muốn in bao nhiêu số"));
+    for(let i=0;i<x;i++){
+        if (i<=1)
+            i===0? temp="1":temp=temp+",1";
+        else {
+            f2=f1;
+            f1=f;
+            f=f1+f2;
+            temp=temp+","+f;
+        }
+    }
+    alert(temp);
+</script>
+</body>
+</html>

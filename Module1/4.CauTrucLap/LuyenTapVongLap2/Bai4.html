@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<script>
+    let text="";
+    for(let i=0;i<5;i++){
+        for (let j=0;j<10;j++){
+            (i===0||i===4)? text+="★":
+                (j===0||j===9)? text+="★":
+                    text+="☐";
+        }
+        text+="<br>";
+    }
+    document.write(text);
+</script>
+</body>
+</html>

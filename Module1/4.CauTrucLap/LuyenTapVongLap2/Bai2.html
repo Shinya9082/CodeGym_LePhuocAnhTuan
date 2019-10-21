@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let a=0;
+    do{
+        a= parseInt(prompt("Nhập vào một số nguyên dương"))
+    }while (a<0);
+    let temp=1;
+    if(a===0)
+        alert("Giai thừ của 0 là 1");
+    else{
+        for (let i=1;i<=a;i++)
+            temp*=i;
+        alert("Giai thừa của "+a+" là "+temp);
+    }
+
+
+</script>
+</body>
+</html>

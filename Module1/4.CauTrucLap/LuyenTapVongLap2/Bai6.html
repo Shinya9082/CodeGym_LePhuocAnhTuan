@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+<script>
+    let text1="",text2="";
+    let x = parseInt(prompt("Nhập vào số x(chẵn)"));
+    while (x%2!==0){
+        x = parseInt(prompt("Phải nhập vào số chẵn"));
+    }
+    let haft=x/2;
+    for (let i=2;i<=8;i+=2){
+        for(let j=0;j<haft;j++){
+            i===0||i===2? text1+="☐":
+                j<((8-i)/2)? text1+="☐":
+                    text1+="★";
+        }
+        for(let j=haft;j>0;j--){
+            i===0||i===2? text1+="☐":
+                j<=((8-i)/2)? text1+="☐":
+                    text1+="★";
+        }
+        for(let j=0;j<haft;j++){
+            i===0||i===2? text1+="☐":
+                    j<((8-i)/2)? text1+="☐":
+                        text1+="★";
+        }
+        for(let j=haft;j>0;j--){
+            i===0||i===2? text1+="☐":
+                j<=((8-i)/2)? text1+="☐":
+                    text1+="★";
+        }
+        text1+="<br>";
+    }
+    for (let i=0;i<=x;i++){
+        for(let j=0;j<x*2;j++){
+            j<i||j>=(x*2-i)? text2+="☐": text2+="★" ;
+        }
+        text2+="<br>";
+    }
+    document.write(text1+text2);
+</script>
+</body>
+</html>

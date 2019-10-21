@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p id="p4"></p>
+<script>
+    let text1="",text2="",text3="",text4="";
+    for(let i=0;i<5;i++){
+        for (let j=0;j<=i;j++){
+            text1+="★";
+        }
+        text1+="<br>";
+    }
+    document.getElementById("p1").innerHTML=text1;
+
+    for(let i=0;i<5;i++){
+        for (let j=5-i;j>0;j--){
+            text2+="★";
+        }
+        text2+="<br>";
+    }
+    document.getElementById("p2").innerHTML=text2;
+
+    for (let i=0;i<5;i++){
+        for (let j=4;j>=0;j--){
+            j>i? text3+="☐":text3+="★"
+        }
+        text3+="<br>";
+    }
+    document.getElementById("p3").innerHTML=text3;
+
+    for(let i=0;i<5;i++){
+        for (let j=0;j<5;j++){
+            j<i? text4+="☐":text4+="★";
+            console.log(j);
+        }
+        text4+="<br>";
+    }
+    document.getElementById("p4").innerHTML=text4;
+</script>
+</body>
+</html>

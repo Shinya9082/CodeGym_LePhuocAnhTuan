@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+    let money= parseInt(prompt("Số tiền đã mượn"));
+    let month= parseInt(prompt("Mượn bao nhiêu tháng"));
+    let interest= parseInt(prompt("Lãi xuất ngân hàng"));
+    let count=0;
+    for(let i=0;i<month;i++){
+        money+=Math.round(money*interest/100);
+        console.log(count);
+    }
+    alert("Tổng tiền phải trả là "+money);
+</script>
+</body>
+</html>
