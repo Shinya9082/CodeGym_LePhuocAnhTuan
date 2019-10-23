@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe</title>
+</head>
+<body>
+<form>
+    <h3>Caro Game Simple</h3>
+    <input type="button" value="Play" onclick="display()">
+    <input type="button" value="Start" onclick="changeValue()">
+    <p id="TicTacToe"></p>
+</form>
+<script>
+    let player=true;
+    let b = document.getElementById("TicTacToe");
+    let board=[];
+
+    for(let i=0;i<5;i++){
+        board[i]=["☐","☐","☐","☐","☐"];
+    }
+    function display() {
+        let data="";
+        for (let i=0;i<5;i++){
+            data+="<br>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        //console.log(data);
+        document.getElementById("TicTacToe").innerHTML=data+"";
+    }
+    function changeValue() {
+        player? alert("Player 1 turn"):alert("Player 2 turn") ;
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        if(player){
+            board[positionX][positionY]="X";
+            player=false;
+        }else{
+            board[positionX][positionY]="O";
+            player=true;
+        }
+        display();
+        checkWin(positionX,positionY);
+    }
+    function checkWin(x,y) {
+        if(x!==0&&x!==4&&y!==0&&y!==4){
+            if(checkX(x,y)||checkY(x,y)||checkXY(x,y)){
+                board[x][y]==="X"? alert("Player 1 win"):
+                    alert("Player 2 win");
+            }
+            alert("Next player plz click start again");
+        } else{
+          if(y!==0&&y!==4){
+              if(checkX(x,y)){
+                  board[x][y]==="X"? alert("Player 1 win"):
+                      alert("Player 2 win");
+              }
+          } else {
+              if(x!==0&&x!==4){
+                  if(checkY(x,y))
+                      board[x][y]==="X"? alert("Player 1 win"):
+                        alert("Player 2 win");
+              }
+          }
+          alert("Next player plz click start again");
+        }
+    }
+    function checkX(x,y) {
+        return(board[x][y]===board[x][y-1]&&board[x][y]===board[x][y+1]);
+    }
+    function checkY(x,y) {
+        return(board[x][y]===board[x-1][y]&&board[x][y]===board[x+1][y]);
+    }
+    function checkXY(x,y) {
+        return(board[x][y]===board[x-1][y-1]&&board[x][y]===board[x+1][y+1])||(board[x][y]===board[x-1][y+1]&&board[x][y]===board[x+1][y-1]);
+    }
+</script>
+</body>
+</html>
