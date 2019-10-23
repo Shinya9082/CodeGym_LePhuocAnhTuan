@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="f">
+    <h3>Type anhthing slowly</h3>
+    <textarea name="txt" id="txt" onkeydown="typeText()"></textarea>
+</form>
+<script>
+    let fakeText="Cho hỏi con mèo mua ở đâu???".split("");
+    let data="";
+    function typeText() {
+        let t=document.f.txt.value.length;
+        if(t>0){
+            if(t>fakeText.length){
+                data="";
+                document.f.txt.value="";
+            } else {
+                for(let i=0;i<t;i++){
+                    data+=fakeText[i];
+                }
+            }
+        }
+        document.f.txt.value=data;
+        data="";
+        setTimeout("typeText()",1);
+    }
+
+</script>
+</body>
+</html>
