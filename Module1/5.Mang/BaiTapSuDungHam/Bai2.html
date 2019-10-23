@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    let value=window.prompt( "Enter a number");
+    let num=value.toString();
+    let result=[];
+    result.push(num[0]);
+    for(let i=1;i<num.length;i++){
+        if(num[i-1]%2===0 && num[i]%2===0){
+            result.push('-',num[i])
+        }else
+            result.push(num[i]);
+    }
+    alert(result.join(''));
+
+</script>
+</body>
+</html>

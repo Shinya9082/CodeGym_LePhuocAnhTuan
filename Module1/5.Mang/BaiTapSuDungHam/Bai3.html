@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+    let str=prompt("Enter a string");
+    const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result= [];
+    for (let i=0;i<str.length;i++){
+        UPPER.includes(str[i])? result.push(str[i].toLowerCase()):
+            LOWER.includes(str[i])? result.push(str[i].toUpperCase()):
+                result.push(str[i]);
+    }
+    alert(result.join(''));
+</script>
+</body>
+</html>
