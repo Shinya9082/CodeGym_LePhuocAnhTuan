@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h3>English to Vietnamese</h3>
+    <input type="text" id="text">
+    <input type="button" id="search" value="Search" onclick="Search()">
+    <div id="display"></div>
+</form>
+<script>
+    const ENG = ["Hello","Good morning","Good night","Good bye"];
+    const VIE = ["Xin chào","Chào buổi sáng","Chào buổi tối","Chào tạm biệt"];
+    let result="";
+    function Search() {
+        let text=document.getElementById("text").value;
+        // for (let i=0; i<ENG.length;i++){
+        //     if (text===ENG[i]) {
+        //         result=VIE[i];
+        //         break;
+        //     }
+        //     result="Error";
+        // }
+        ENG.includes(text)? result=VIE[ENG.indexOf(text)]: result="Error";
+        document.getElementById("display").innerHTML=result;
+    }
+</script>
+</body>
+</html>
