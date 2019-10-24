@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap9</title>
+</head>
+<body>
+<script>
+    let a=new Array(10);console.log(a);
+    for (let i = 0; i < a.length; i++) {
+        a[i]=parseInt(prompt("Nhập phần tử thứ "+(i+1)+" của mảng a"));
+    }
+    let b=new Array(10);console.log(b);
+    for (let i = 0; i < b.length; i++) {
+        b[i]=parseInt(prompt("Nhập phần tử thứ "+(i+1)+" của mảng b"));
+    }
+    let c=[];
+    for(let i=0;i<10;i++){
+        c.push(a[i]);
+    }
+    for(let i=0;i<10;i++){
+        c.push(b[i]);
+    }
+    alert(c);
+
+
+</script>
+</body>
+</html>

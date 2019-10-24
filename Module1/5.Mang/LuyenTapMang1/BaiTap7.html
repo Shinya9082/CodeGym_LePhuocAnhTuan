@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai7</title>
+</head>
+<body>
+<script>
+    let a=new Array(10);
+    for (let i = 0; i < a.length; i++) {
+        a[i]=parseInt(prompt("Nhập phần tử thứ "+(i+1)));
+    }
+    let v= (parseInt(prompt("Nhập một phần tử V:")));
+    while(a.includes(v)){
+        for(let i=a.indexOf(v);i<10;i++){
+            i!==9? a[i]=a[i+1]: a[9]=0;
+        }
+    }
+    alert(a);
+</script>
+</body>
+</html>
