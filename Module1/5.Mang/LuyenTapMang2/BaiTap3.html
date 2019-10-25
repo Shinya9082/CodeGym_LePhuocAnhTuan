@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap3</title>
+</head>
+<body>
+<script>
+    let x=prompt("Số ký tự muốn nhập");
+    let a=[];
+    console.log(a);
+    for (let i=0;i<x;i++) {
+        a[i]=prompt("Nhập ký thứ "+(i+1)).trim();
+    }
+    console.log(a);
+    let count=0;
+    for (let i in a) {
+        !isNaN(a[i]+'')&&a[i]!==''?  count++:null;
+    }
+    alert("Số ký tự số là "+count);
+</script>
+</body>
+</html>

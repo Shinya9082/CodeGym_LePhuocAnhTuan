@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap6</title>
+</head>
+<body>
+<script>
+    let a=prompt("Nhập vào một chuỗi thứ 1 để kiểm tra"),text=a+"<br>Sau khi được biến đổi - thành _ là<br>";
+    for(let i=0;i<a.length;i++){
+        a[i]==='-'? text+='_':text+=a[i];
+    }
+    document.write(text);
+
+</script>
+</body>
+</html>

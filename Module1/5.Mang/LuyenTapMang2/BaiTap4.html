@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap4</title>
+</head>
+<body>
+<script>
+    let a=prompt("Nhập vào một chuỗi để kiểm tra"),b=[],temp='';
+    const number= ["0",'1','2','3','4','5','6','7','8','9'];
+    for (let i=0;i<a.length;i++){
+        if(number.includes(a[i])){
+            temp+=a[i];
+            if (i===(a.length-1))
+                b.push(temp);
+        }
+        else{
+            if (temp!=='') {
+                b.push(temp);
+                temp='';
+            }
+        }
+    }
+    console.log(a);
+    console.log(b);
+    document.write(a+"<br>Chuỗi trên có "+b.length+" số trong chuỗi<br>"+b);
+//    alert("Có "+b.length+" số trong chuỗi")
+</script>
+</body>
+</html>
