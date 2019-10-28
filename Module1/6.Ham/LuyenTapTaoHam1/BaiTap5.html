@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2=["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
+
+
+    let temp= f(prompt("Input"));
+    if (temp===-1){
+        alert("Not found")
+    } else {
+        alert(arr2[temp])
+    }
+
+    function f(str) {
+        return arr1.indexOf(str);
+    }
+</script>
+</body>
+</html>
