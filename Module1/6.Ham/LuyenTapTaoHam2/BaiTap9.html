@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap9</title>
+</head>
+<body>
+<script>
+    let array=parseInt(prompt("Input array?"));
+    alert(checkNumInArray(prompt("Input a character to check")));
+
+    function checkNumInArray(char) {
+        let count=0;
+        for (let i=0;i<array.length; i++) {
+            array[i] === char ? count++ : null;
+        }
+        if (count===0)
+            return-1;
+        else
+            return count;
+    }
+
+</script>
+</body>
+</html>
