@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let text=prompt("Input a string");
+    let srt=text.split('');
+    console.log(srt);
+    isPalindrome(0,srt.length-1)?
+        alert(text+" Is Palindrome"):alert( text+" Isn't Palindrome");
+
+    function isPalindrome(start,end) {
+        console.log(start);
+        console.log(end);
+        if(start<end) {
+            if(srt[start] === srt[end])
+                isPalindrome(++start , --end);
+            else
+                return false;
+        }
+        return  true;
+
+    }
+
+</script>
+</body>
+</html>
