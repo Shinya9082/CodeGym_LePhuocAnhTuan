@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script src="Mobile.js"></script>
+<form>
+    <div id="nokia">Nokia<br></div>
+    <div id="iphone">Iphone<br></div>
+</form>
+<script>
+    let nokia= new Mobile();
+    let iphone = new Mobile();
+    nokia.createMesage("Iphone is Suck");
+    iphone.receiveMessage(nokia.sentMessage());
+    document.getElementById("nokia").innerHTML+=nokia.battery ;
+    document.getElementById("iphone").innerHTML+=iphone.checkMessage()+"<br>" ;
+    document.getElementById("iphone").innerHTML+=iphone.battery+"<br>";
+
+</script>
+</body>
+</html>
