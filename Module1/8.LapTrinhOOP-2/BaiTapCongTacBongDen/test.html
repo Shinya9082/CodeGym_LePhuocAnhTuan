@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="ElectricLamp.js"></script>
+    <script src="SwitchButton.js"></script>
+</head>
+<body>
+<input id="button" type="button" value="On" onclick="buttonIsPressed()">
+<script>
+    let lamp= new ElectricLamp();
+    let switchButton= new SwitchButton();
+    switchButton.connectToLamp(lamp);
+
+    function buttonIsPressed() {
+        switch(document.getElementById("button").value){
+            case 'On':
+                switchButton.switchOn();
+                document.getElementById("button").value='Off';
+                break;
+            case 'Off':
+                switchButton.switchOff();
+                document.getElementById("button").value='On';
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>
