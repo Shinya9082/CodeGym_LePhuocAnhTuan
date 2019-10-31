@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script src="Apple.js"></script>
+<script src="Human.js"></script>
+<script>
+    let Adam= new Human('Adam',true,50);
+    let Eva= new Human('Eva',false,40);
+    let isEating=true;
+    let appleTree= [];
+    for (let i=0;i<10;i++){
+        appleTree.push(new Apple);
+        console.log("Tree has Apple"+(i+1));
+    }
+    for (let i=0;i<10;i++){
+        while (!appleTree[i].isEmpty()){
+            if(isEating){
+                Adam.eat(appleTree[i]);
+                Adam.say("Adam is eating apple "+(i+1)+" and weight "+Adam.getWeight());
+
+                isEating=false;
+            }else {
+                Eva.eat(appleTree[i]);
+                Eva.say("Eva is eating apple "+(i+1)+" and weight "+Eva.getWeight());
+                isEating=true;
+            }
+        }
+        console.log(appleTree[i].getWeight());
+    }
+</script>
+</body>
+</html>
