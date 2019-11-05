@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let classNameReg=/^[CAP]\d{4}[GHIKLM]$/;
+    function isValidateClassName(str) {
+        return classNameReg.test(str);
+    }
+    console.log(isValidateClassName('C0318G'));
+    console.log(isValidateClassName('M0318G'));
+    console.log(isValidateClassName('P0323A'));
+</script>
+</body>
+</html>
