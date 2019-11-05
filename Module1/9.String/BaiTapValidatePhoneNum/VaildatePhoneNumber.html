@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let phoneReg=/^\(\d\d\)-\(\d{10}\)$/;
+    function isValidatePhoneNum(str) {
+        return phoneReg.test(str)
+    }
+    console.log(isValidatePhoneNum('(84)-(0978489648)'));
+    console.log(isValidatePhoneNum('(84)-(09784648)'))
+</script>
+</body>
+</html>
