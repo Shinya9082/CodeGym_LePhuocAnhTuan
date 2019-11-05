@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let accReg=/^[_a-z0-9]{6,}$/;
+    function isValidateAccount(str) {
+        return accReg.test(str)
+    }
+    console.log(isValidateAccount("123abc_"));
+    console.log(isValidateAccount("_abc123"));
+    console.log(isValidateAccount("______"));
+    console.log(isValidateAccount("123456"));
+    console.log(isValidateAccount("abcdefg"));
+    console.log(isValidateAccount("1.@"));
+    console.log(isValidateAccount("1234_"));
+
+</script>
+</body>
+</html>
