@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let emailReg=/^[a-zA-Z0-9]+[a-zA-Z0-9]*@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)$/;
+    function isValidateEmail(str) {
+        return emailReg.test(str);
+    }
+    console.log(isValidateEmail('a@gmail.com'));
+    console.log(isValidateEmail('ab@yahoo.com'));
+    console.log(isValidateEmail('abc@hotmail.com'));
+    console.log(isValidateEmail('@gmail.com'));
+    console.log(isValidateEmail('ab@gmail.'));
+    console.log(isValidateEmail('@#abc@gmail.com'));
+</script>
+</body>
+</html>
