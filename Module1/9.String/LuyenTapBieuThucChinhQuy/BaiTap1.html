@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regDateTime=/^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/;
+    function isDateTime(str) {
+       return regDateTime.test(str)
+    }
+    console.log(isDateTime('13/9/1923'));//false
+    console.log(isDateTime('12/10/1923'));//true
+    console.log(isDateTime('32/01/1923'));//false
+
+</script>
+</body>
+</html>

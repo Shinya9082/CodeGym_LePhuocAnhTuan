@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regVowel=/[aiueo]/gi;
+    let regConsonant=/[^aiueo\d\W]/gi;
+    function countVowel(str) {
+
+        console.log(str.match(regVowel));
+        return str.match(regVowel).length
+    }
+    function countConsonant(str) {
+        console.log(str.match(regConsonant));
+        console.log(regConsonant.exec(str));
+        return str.match(regConsonant).length;
+    }
+    let text=prompt("Input a string");
+    alert(text+"\nVowel "+ countVowel(text)+"\nConsonant "+countConsonant(text));
+
+</script>
+</body>
+</html>

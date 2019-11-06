@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let PinReg=/^\d{6}$/;
+    let pin;
+    do{
+        pin= prompt("Create new PIN(must have 6 numbers)")
+    }while (!PinReg.test(pin));
+    let clientPass= new RegExp('^'+pin+'$');
+    console.log(pin);
+    console.log(clientPass);
+
+    for (let i=0;i<4;i++){
+        let temp= prompt("Enter your PIN");
+        while (!PinReg.test(temp)){
+            temp=prompt("Pleas enter again! Must have 6 number Ex:000000");
+        }
+        if (clientPass.test(temp)){
+            alert("Welcome ");
+            break;
+        }
+        alert("Wrong pass you have "+(5-i-1)+' try left');
+    }
+
+</script>
+</body>
+</html>

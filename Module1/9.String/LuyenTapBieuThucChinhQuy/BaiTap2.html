@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regWord=/([a-zA-z])+\b/g;
+    function countWord(str) {
+        let match=str.match(regWord);
+        console.log(match);
+        return match.length;
+    }
+    console.log(countWord("Hello World!!! 123"))
+</script>
+</body>
+</html>
