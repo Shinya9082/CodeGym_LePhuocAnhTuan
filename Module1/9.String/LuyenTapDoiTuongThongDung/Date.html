@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="1"></div>
+<script>
+    let myBirthday = new Date(1993,9,6,0,0,0);
+    let currentDay = new Date(2019,11,6,0,0,0);
+    console.log(myBirthday);
+    console.log(currentDay);
+
+    let year= currentDay.getFullYear()-myBirthday.getFullYear();
+    let month= (year)*12+(currentDay.getMonth()-myBirthday.getMonth()) ;
+    let day=((currentDay-myBirthday)/100/60/60/24);
+    let hour=((currentDay-myBirthday)/100/60/60);
+    let minute=((currentDay-myBirthday)/100/60);
+    let second=((currentDay-myBirthday)/100);
+    document.getElementById("1").innerHTML+="Tôi đã sống được "+year+" năm<br>";
+    document.getElementById("1").innerHTML+="Tôi đã sống được "+month+" tháng<br>";
+    document.getElementById("1").innerHTML+="Tôi đã sống được "+day+" ngày<br>";
+    document.getElementById("1").innerHTML+="Tôi đã sống được "+hour+" giờ<br>";
+    document.getElementById("1").innerHTML+="Tôi đã sống được "+minute+" phút<br>";
+    document.getElementById("1").innerHTML+="Tôi đã sống được "+second+" giây<br>";
+
+</script>
+</body>
+</html>

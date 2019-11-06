@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str="Tôi yêu ngôn ngữ lập trình Javascript";
+    console.log(str.match(/a/g).length);
+    let reg=/\p{L}+/gu;
+    console.log(str.match(reg));
+    console.log(str.match(reg).length);
+    console.log(str.replace('Javascript','Typescript'));
+</script>
+</body>
+</html>
