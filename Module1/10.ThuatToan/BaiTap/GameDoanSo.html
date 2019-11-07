@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nums=[];
+    for (let i=0;i<100;i++){
+        nums[i]=(i+1);
+    }
+    let NUM=Math.floor(Math.random()*100+1) ;
+    let tryTimes=0;
+    let tryText=['First','Second','Third','Fourth','Fifth','Sixth','Seventh','Eighth','Ninth','Tenth'];
+    let val,temp;
+    // do{
+    //     val= parseInt(prompt(tryTimes+++" try. Guess a number "));
+    //     temp=findNumber(nums,val,NUM);
+    //     if (temp===0){
+    //         alert('Correct');
+    //     }else {
+    //         if (temp>0){
+    //             alert('Too High');
+    //         } else
+    //             alert('Too Low');
+    //     }
+    // } while (temp!==0);
+    console.log(nums);
+    document.write('Secret= '+ NUM+'<br>');
+    binSearchUserInput(nums,NUM);
+    //binSearch(nums,NUM);
+
+    function binSearch(arr, i) {
+        let mid=Math.floor(arr.length/2);
+        console.log(arr[mid]);
+        document.write(arr+'<br>');
+        if (arr[mid] === i) {
+            document.write(tryText[tryTimes++]+' Guess '+arr[mid]+' Correct')
+        } else if (arr[mid] < i && arr.length > 1){
+            document.write(tryText[tryTimes++]+' guess '+arr[mid]+' Answer: too low<br>');
+            return binSearch(arr.splice(mid, Number.MAX_VALUE),i)
+        } else if (arr[mid] > i && arr.length>1) {
+            document.write(tryText[tryTimes++] + ' guess ' + arr[mid] + ' Answer: too high<br>');
+            return binSearch(arr.slice(0, mid), i)
+        } else {
+            document.write('not here', i);
+            return -1;
+        }
+    }
+
+    function binSearchUserInput(arr, i) {
+        document.write(arr+'<br>');
+        let input= parseInt(prompt('Guess a number between '+arr[0]+' and '+arr[arr.length-1]));
+        while (!arr.includes(input)){
+            input= parseInt(prompt('Input between '+arr[0]+' and '+arr[arr.length-1]));
+        }
+        //let mid=Math.floor(arr.length/2);
+        //console.log(arr[mid]);
+        if (input === i) {
+            document.write(tryText[tryTimes++]+' Guess '+input+' Correct')
+        } else if (input < i && arr.length > 1){
+            document.write(tryText[tryTimes++]+' guess '+input+' Answer: too low must higher<br>');
+            return binSearchUserInput(arr.splice(arr.indexOf(input), Number.MAX_VALUE),i)
+        } else if (input > i && arr.length>1) {
+            document.write(tryText[tryTimes++] + ' guess ' + input + ' Answer: too high must lower<br>');
+            return binSearchUserInput(arr.slice(0, arr.indexOf(input)), i)
+        } else {
+            document.write('not here', i);
+            return -1;
+        }
+    }
+
+    function findNumber(nums,val,NUM) {
+        let valposition=0;
+        let NUMposition=0;
+        for (let i=0;i<100;i++){
+            if(nums[i]===val) valposition=i;
+            if (nums[i]===NUM) NUMposition=i;
+        }
+        if(valposition===NUMposition)
+            return 0;
+        else
+            if (valposition>NUMposition)
+                return 1 ;
+            else
+                return -1;
+    }
+</script>
+</body>
+</html>
