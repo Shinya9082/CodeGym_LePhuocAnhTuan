@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nums = [];
+    for(let i=0;i<100;++i){
+        nums[i] = Math.floor(Math.random() * 101);
+    }
+    nums.sort(function(a, b){return a - b});
+    display(nums);
+    let val = parseInt(prompt("Enter a value to count: "));
+    document.write('The value '+val);
+    let temp=findVal(nums,val);
+    if(temp===-1){
+        document.write(' is not found')
+    } else
+        document.write(' is at '+temp);
+
+
+
+
+    function findVal(arr, val) {
+        for(let i=0;i<arr.length;++i){
+            if(arr[i]===val) return i;
+        }
+        return -1;
+    }
+
+    function display(arr) {
+        for(let i=0;i<arr.length;++i){
+            if((i+1)%10===0){
+                document.write(arr[i]+'<br>');
+            } else {
+                document.write(arr[i]+' ');
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>
