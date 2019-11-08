@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let viettelPhoneReg=/(?=03[2-9])\d{10}/;
+    let phoneList=['0928445566','0929778899','0329876981','0929876981'];
+    let text= phoneList.toString().match(viettelPhoneReg);
+    let text1=phoneList.toString().replace(/,/g,'<br>');
+    document.write(''+text1+'<br>');
+    document.write(text.toString());
+</script>
+</body>
+</html>
